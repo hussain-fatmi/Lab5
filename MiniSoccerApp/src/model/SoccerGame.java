@@ -1,6 +1,5 @@
 package model;
 
-import java.awt.Point;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -51,9 +50,6 @@ public class SoccerGame {
 						SoccerBall.getSoccerBall().resetSoccerBall();
 					} else {
 						automateGoalkeeper();
-						if(getActivePlayer().isPlayerHasBall()) {
-							SoccerBall.getSoccerBall().setPosition(new Point(getActivePlayer().getPlayerPosition().x - 10, getActivePlayer().getPlayerPosition().y + 55));
-						}
 					}
 				}
 			}
