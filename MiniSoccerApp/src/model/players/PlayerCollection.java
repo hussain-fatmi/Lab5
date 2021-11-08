@@ -5,19 +5,45 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.lang.Iterable;;
 
+/**
+ * An iterable Collection of GamePlayers
+ *
+ */
 public class PlayerCollection implements Iterable<GamePlayer>{
 	
+	/**
+	 * An ArrayList of GamePlayers in the game
+	 */
 	private ArrayList<GamePlayer> Collection = new ArrayList<GamePlayer>();
 	
+	/**
+	 * Adds a GamePlayer to the Collection
+	 * @param player
+	 */
 	public void add(GamePlayer player) {
 		this.Collection.add(player);
 		this.sort();
 	}
 	
+	/**
+	 * Removes a GamePlayer from the collection
+	 */
+	public void remove(GamePlayer player) {
+		Collection.remove(player);
+	}
+	
+	/**
+	 * Sorts the Collection of GamePlayers
+	 */
 	public void sort() {
 		Collections.sort(Collection);
 	}
 	
+	/**
+	 * Returns the GamePlayer in the Collection with the specified name
+	 * @param name
+	 * @return the GamePlayer with the name (if it exists), otherwise null
+	 */
 	public GamePlayer get(String name) {
 		for(GamePlayer player : Collection) {
 			if(player.playerName.equalsIgnoreCase(name)) {
@@ -27,27 +53,12 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 		return null;
 	}
 
+	/**
+	 * An iterator over the Collection of GamePlayers
+	 */
 	@Override
 	public Iterator<GamePlayer> iterator() {
-		Iterator<GamePlayer> it = new Iterator<GamePlayer>() {
-
-            private int currentIndex = 0;
-
-            @Override
-            public boolean hasNext() {
-                return currentIndex < Collection.size() && Collection.get(currentIndex) != null;
-            }
-
-            @Override
-            public GamePlayer next() {
-                return Collection.get(currentIndex++);
-            }
-
-            @Override
-            public void remove() {
-                throw new UnsupportedOperationException();
-            }
-        };
-        return it;
+		Iterator<GamePlayer> it = new PlayerCollectionIterator(this.Collection);
+		return it;
 	}
 }
