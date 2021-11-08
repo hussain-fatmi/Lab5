@@ -16,5 +16,15 @@ class moverRightTest {
 		player.moveRight();
 		assertEquals(5.0, player.getPlayerPosition().getX() - 300);
 	}
+	
+	@Test
+	void test2() {
+		Striker player = new Striker("Striker", Color.black);
+		player.setPlayerPosition(new Point(300, 300));;
+		player.moveRight();
+		player.moveRight();
+		assertNotEquals(5.0, player.getPlayerPosition().getX() - 300);
+	}
+
 
 }
