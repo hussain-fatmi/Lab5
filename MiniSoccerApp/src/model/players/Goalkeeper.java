@@ -14,8 +14,8 @@ public class Goalkeeper extends GamePlayer {
 
 	/**
 	 * Creates a Goalkeeper with a specified name and color.
-	 * @param name
-	 * @param color
+	 * @param name - the name of the goalkeeper
+	 * @param color - the color of the goalkeeper
 	 */
 	public Goalkeeper(String name, Color color) {
 		super(name, color);
