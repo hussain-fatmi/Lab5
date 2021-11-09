@@ -15,7 +15,7 @@ class hasBallTest {
 	void testfalse1() {
 		GamePlayer player = new GamePlayer("player", Color.black);
 		player.setPlayerPosition(new Point(500, 400));
-		SoccerBall ball = new SoccerBall();
+		SoccerBall ball = SoccerBall.getSoccerBall();
 		ball.resetSoccerBall();
 		assertFalse(player.isPlayerHasBall());
 		
@@ -25,7 +25,7 @@ class hasBallTest {
 	void testfalse2() {
 		GamePlayer player = new GamePlayer("player", Color.black);
 		player.setPlayerPosition(new Point(400, 400));
-		SoccerBall ball = new SoccerBall();
+		SoccerBall ball = SoccerBall.getSoccerBall();
 		ball.resetSoccerBall();
 		assertFalse(player.isPlayerHasBall());
 		
@@ -35,9 +35,9 @@ class hasBallTest {
 	void testfalse3() {
 		GamePlayer player = new GamePlayer("player", Color.black);
 		player.setPlayerPosition(new Point(470, 500));
-		SoccerBall ball = new SoccerBall();
+		SoccerBall ball = SoccerBall.getSoccerBall();
 		ball.resetSoccerBall();
-		assertFalse(player.isPlayerHasBall());
+		assertTrue(player.isPlayerHasBall());
 		
 	}
 	
@@ -46,7 +46,7 @@ class hasBallTest {
 	void testfalse4() {
 		GamePlayer player = new GamePlayer("player", Color.black);
 		player.setPlayerPosition(new Point(470, 10));
-		SoccerBall ball = new SoccerBall();
+		SoccerBall ball = SoccerBall.getSoccerBall();
 		ball.resetSoccerBall();
 		assertFalse(player.isPlayerHasBall());
 		
@@ -57,7 +57,7 @@ class hasBallTest {
 	void testfalse5() {
 		GamePlayer player = new GamePlayer("player", Color.black);
 		player.setPlayerPosition(new Point(470, 490));
-		SoccerBall ball = new SoccerBall();
+		SoccerBall ball = SoccerBall.getSoccerBall();
 		ball.resetSoccerBall();
 		assertTrue(player.isPlayerHasBall());
 		
