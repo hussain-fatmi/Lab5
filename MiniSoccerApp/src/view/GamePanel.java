@@ -10,13 +10,24 @@ import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
-
+/**
+ * GamePanel is the panel to display the game
+ */
 public class GamePanel extends JPanel {
 
+	/**
+	 * The font of text displayed
+	 */
 	private final Font uiFont;
 
+	/**
+	 * The SoccerGame to display
+	 */
 	private SoccerGame game;
 
+	/**
+	 * Instantiates a new Panel
+	 */
 	public GamePanel() {
 		super(null);
 		super.setBackground(new Color(112, 176, 49));
@@ -25,10 +36,16 @@ public class GamePanel extends JPanel {
 		setupRepaint();
 	}
 
+	/**
+	 * Creates a new SoccerGame
+	 */
 	public void setupSoccerGame() {
 		game = new SoccerGame();
 	}
 
+	/**
+	 * Repaints the panel
+	 */
 	private void setupRepaint() {
 		java.util.Timer timer = new Timer();
 		TimerTask repaintTask = new TimerTask() {
@@ -40,10 +57,17 @@ public class GamePanel extends JPanel {
 		timer.schedule(repaintTask, 0, 10);
 	}
 
+	/**
+	 * Gets the game being displayed
+	 * @return the game being displayed
+	 */
 	public SoccerGame getGame() {
 		return game;
 	}
 
+	/**
+	 * Paints component in the panel
+	 */
 	@Override
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -57,6 +81,10 @@ public class GamePanel extends JPanel {
 		paintStatistics(g);
 	}
 
+	/**
+	 * Paints pause text on the panel
+	 * @param g - the panel to draw on
+	 */
 	private void paintPausedText(Graphics g) {
 		if (getGame().isPaused()) {
 			g.setColor(Color.red);
@@ -65,6 +93,10 @@ public class GamePanel extends JPanel {
 		}
 	}
 
+	/**
+	 * Paints the goal gate on the panel
+	 * @param g - the panel to draw on
+	 */
 	private void paintGate(Graphics g) {
 		g.setColor(Color.white);
 		g.fillRect(200, 10, 200, 50);
