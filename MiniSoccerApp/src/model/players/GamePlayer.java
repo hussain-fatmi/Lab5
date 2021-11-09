@@ -39,8 +39,8 @@ public class GamePlayer implements Comparable<GamePlayer>{
 	/**
 	 * Creates a player with a specified name and color.
 	 * At creation the player does not possess the ball, and does not have any statistics
-	 * @param name
-	 * @param color
+	 * @param name - the name of the player
+	 * @param color - the color of the player
 	 */
 	public GamePlayer(String name, Color color){
 		this.color = color;
@@ -122,6 +122,7 @@ public class GamePlayer implements Comparable<GamePlayer>{
 	
 	/**
 	 * Sets the position of the player
+	 * @param point - the Point to set position to
 	 */
 	public void setPlayerPosition(Point point){
 		this.position = point;
@@ -137,7 +138,7 @@ public class GamePlayer implements Comparable<GamePlayer>{
 	
 	/**
 	 * Sets the player's statistics
-	 * @param stat
+	 * @param stat - the value to set playerStatistic to
 	 */
 	public void setPlayerStatistics(int stat) {
 		playerStatistics.setStats(stat);
