@@ -27,7 +27,7 @@ public class PlayerStatistics {
 	
 	/**
 	 * Sets the player statistics
-	 * @param stat
+	 * @param stat - the value to set playerStatistic to
 	 */
 	public void setStats(int stat) {
 		this.playerStatistics = stat;
