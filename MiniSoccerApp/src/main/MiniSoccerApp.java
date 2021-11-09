@@ -6,6 +6,12 @@ import view.GamePanel;
 
 import javax.swing.*;
 
+/**
+ * MiniSoccerApp is a mini soccer game.
+ * The user can control a striker to score as many goals in the allotted time
+ * An automated goalkeeper protects the gate from the striker
+ * Use arrow keys to move, and space to shoot the ball
+ */
 public class MiniSoccerApp {
 
 	public static void main(String[] args) {
