@@ -11,8 +11,8 @@ public class Striker extends GamePlayer {
 	
 	/**
 	 * Creates a Striker with a specified name and color.
-	 * @param name
-	 * @param color
+	 * @param name - the name of the striker
+	 * @param color - the color of the striker
 	 */
 	public Striker(String name, Color color) {
 		super(name, color);
