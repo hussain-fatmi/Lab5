@@ -10,7 +10,7 @@ public class PlayerFactory {
 	/**
 	 * Creates a new GamePlayer with the specified name.
 	 * Can be a striker or a goalkeeper depending of the name
-	 * @param name
+	 * @param name - the name of the player to creates
 	 * @return a new GamePlayer (Striker or Goalkeeper)
 	 */
 	public GamePlayer getPlayer(String name) {
