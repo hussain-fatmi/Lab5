@@ -18,7 +18,7 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 	
 	/**
 	 * Adds a GamePlayer to the Collection
-	 * @param player
+	 * @param player - the player to add to the collection
 	 */
 	public void add(GamePlayer player) {
 		this.Collection.add(player);
@@ -27,6 +27,7 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 	
 	/**
 	 * Removes a GamePlayer from the collection
+	 * @param player - the player to remove from the collection
 	 */
 	public void remove(GamePlayer player) {
 		Collection.remove(player);
@@ -41,7 +42,7 @@ public class PlayerCollection implements Iterable<GamePlayer>{
 	
 	/**
 	 * Returns the GamePlayer in the Collection with the specified name
-	 * @param name
+	 * @param name - the name of the player to get
 	 * @return the GamePlayer with the name (if it exists), otherwise null
 	 */
 	public GamePlayer get(String name) {
